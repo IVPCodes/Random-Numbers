@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downloads</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#121212;
+    color:white;
+    margin:0;
+    padding:40px;
+}
+h1{
+    text-align:center;
+}
+.downloads{
+    max-width:700px;
+    margin:auto;
+    display:grid;
+    gap:10px;
+}
+.download{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1f1f1f;
+    padding:15px 20px;
+    border-radius:8px;
+}
+.download a{
+    background:#3b82f6;
+    color:white;
+    text-decoration:none;
+    padding:8px 16px;
+    border-radius:6px;
+    transition:.2s;
+}
+.download a:hover{
+    background:#2563eb;
+}
+</style>
+</head>
+<body>
+<h1>Download Random Numbers. 1/1 available</h1>
+<div class="downloads" id="downloads"></div>
+<script>
+const container = document.getElementById("downloads");
+for(let i = 1; i <= 100; i++){
+    container.innerHTML += `
+        <div class="download">
+            <span>Download ${i}</span>
+            <a href="https://raw.githubusercontent.com/IVPCodes/Random-Numbers/main/Random%20Numbers${i}.zip" download>
+                Download
+            </a>
+        </div>
+    `;
+}
+</script>
+</body>
+</html>
